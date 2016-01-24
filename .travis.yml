@@ -4,6 +4,8 @@ lein: lein2
 jdk:
   - openjdk6
 before_install:
+  - git clone https://github.com/nathanmarz/cascalog
+  - cd cascalog; lein sub install; lein install
   - nativepath=/home/$USER/native/Linux-amd64-64
   - fwtools_path=/usr/local/fwtools/usr/lib
   -
