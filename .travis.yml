@@ -1,5 +1,5 @@
 language: clojure
-script: lein2 test 
+script: lein2 midjie
 lein: lein2
 jdk:
   - openjdk6
