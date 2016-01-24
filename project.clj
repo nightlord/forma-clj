@@ -1,6 +1,6 @@
 (defproject forma "2.0.0-SNAPSHOT"
   :description "[FORMA](http://goo.gl/4YTBw) gone Functional."
-  :min-lein-version "2.5.0"
+  :min-lein-version "2.5.1"
   :repositories {"conjars" "http://conjars.org/repo/"}
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
