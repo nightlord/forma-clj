@@ -8,6 +8,9 @@ before_install:
   - sudo hostname "$(hostname | cut -c1-63)"
   - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
   - cat /etc/hosts # optionally check the content *after*
+  - git clone https://github.com/nathanmarz/cascalog
+  - cd cascalog; lein sub install; lein install
+  - cd ..
   - nativepath=/home/$USER/native/Linux-amd64-64
   - fwtools_path=/usr/local/fwtools/usr/lib
   -
