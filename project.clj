@@ -9,7 +9,7 @@
   :dev-resources-paths ["dev"]
   :jvm-opts ["-XX:+UseConcMarkSweepGC" "-Xms1024M" "-Xmx1048M" "-server"]
   :main nil
-  :dependencies [[org.clojure/clojure "1.6.0"]
+  :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/tools.cli "0.3.1"]
                  [org.clojure/tools.logging "0.2.3"]
                  [org.clojure/data.csv "0.1.2"]
