@@ -38,12 +38,12 @@ error."
 (tabular
  (let [src (io/hfs-wholefile hdf-path)
        [datasets n] ((juxt identity count) ?dataset-seq)]
-   (fact?<- "Test that our cascalog queries are returning
+   (<- "Test that our cascalog queries are returning
              the proper subdatasets."
-            ?result [?count]
+            [?count]
             (src ?filename ?hdf)
             (unpack-modis [datasets] ?hdf :> ?dataset ?freetile)
-            (c/count ?count)))
+            (c/count ?count)) => (produces [?result]))
  ?dataset-seq      ?result
  [:ndvi :evi]      [[2]]
  [:evi :reli :mir] [[3]])
