@@ -4,6 +4,10 @@ lein: lein2
 jdk:
   - openjdk6
 before_install:
+  - cat /etc/hosts # optionally check the content *before*
+  - sudo hostname "$(hostname | cut -c1-63)"
+  - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
+  - cat /etc/hosts # optionally check the content *after*
   - nativepath=/home/$USER/native/Linux-amd64-64
   - fwtools_path=/usr/local/fwtools/usr/lib
   -
